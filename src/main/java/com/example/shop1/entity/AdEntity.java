@@ -30,10 +30,10 @@ public class AdEntity {
     Integer id;
     /** Автор Объявления
      * @param author  */
-//    @ManyToOne
-//    @JsonIgnore
-//    @JoinColumn(name = "author_id")
-//    UserEntity author;
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "author_id")
+    UserEntity author;
     /** Стоимость Объявления
      * @param price  */
     @Column(name = "price")
@@ -48,16 +48,16 @@ public class AdEntity {
     String description;
     /** Комментарии Объявления
      */
-//    @OneToMany(mappedBy = "ad")
-//    @JsonBackReference
-//    @ToString.Exclude
-//    List<CommentEntity> commentEntities;
-//    /** Фото Объявления
-//     */
-//    @OneToMany(mappedBy = "ad")
-//    @JsonBackReference
-//    @ToString.Exclude
-//    List<ImageEntity> imageEntities;
+    @OneToMany(mappedBy = "ad")
+    @JsonBackReference
+    @ToString.Exclude
+    List<CommentEntity> commentEntities;
+    /** Фото Объявления
+     */
+    @OneToMany(mappedBy = "ad")
+    @JsonBackReference
+    @ToString.Exclude
+    List<ImageEntity> imageEntities;
 
     @Override
     public boolean equals(Object o) {
