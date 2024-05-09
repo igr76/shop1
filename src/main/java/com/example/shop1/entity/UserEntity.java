@@ -85,10 +85,10 @@ public class UserEntity {
     @ToString.Exclude
     List<AdEntity> adEntities;
 
-//    @OneToMany(mappedBy = "author")
-//    @JsonBackReference
-//    @ToString.Exclude
-//    List<CommentEntity> commentEntities;
+    @OneToMany(mappedBy = "author")
+    @JsonBackReference
+    @ToString.Exclude
+    List<CommentEntity> commentEntities;
 //
 //    @Column(name = "role")
 //    @Enumerated(EnumType.STRING)
